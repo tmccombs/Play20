@@ -496,7 +496,7 @@ private[json] object JacksonJson {
   def generateFromJsValue(jsValue: JsValue, escapeNonASCII: Boolean = false): String = {
     val sw = new java.io.StringWriter
     val gen = stringJsonGenerator(sw)
-    if(escapeNonASCII) {
+    if (escapeNonASCII) {
       gen.enable(JsonGenerator.Feature.ESCAPE_NON_ASCII)
     }
     mapper.writeValue(gen, jsValue)

@@ -50,7 +50,6 @@ object Json {
    */
   def stringify(json: JsValue): String = JacksonJson.generateFromJsValue(json)
 
-
   //We use unicode \u005C for a backlash in comments, because Scala will replace unicode escapes during lexing
   //anywhere in the program.
   /**
@@ -71,7 +70,7 @@ object Json {
    * @param json the JsValue to convert
    * @return a String with the json representation with all non-ascii characters escaped.
    */
-  def asciiStringify(json: JsValue): String = JacksonJson.generateFromJsValue(json,true)
+  def asciiStringify(json: JsValue): String = JacksonJson.generateFromJsValue(json, true)
 
   /**
    * Convert a JsValue to its pretty string representation using default Jackson
